@@ -59,7 +59,7 @@ table "users" {
 	foreign_key "fk" {
 		columns = [table.users.column.account_active]
 		ref_columns = [table.accounts.column.active]
-		on_delete = "SET NULL"
+		on_delete = SET_NULL
 	}
 }
 
@@ -102,7 +102,7 @@ table "accounts" {
 	foreign_key "fk" {
 		columns = [table.accounts.column.user_active]
 		ref_columns = [table.users.column.active]
-		on_delete = "SET NULL"
+		on_delete = SET_NULL
 	}
 }
 
